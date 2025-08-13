@@ -42,7 +42,7 @@ if st.sidebar.button('Predict Fraud Status'):
     type_TRANSFER = 1 if user_data['transaction_type'] == 'TRANSFER' else 0
     errorBalance = user_data['newbalanceOrig'] + user_data['amount'] - user_data['oldbalanceOrg']
     isFlaggedFraud = 1 if user_data['amount'] > 200000 else 0
-
+ 
 
     features = np.array([[
         user_data['step'],
@@ -71,4 +71,3 @@ if st.sidebar.button('Predict Fraud Status'):
 
 st.write('---')
 st.write("Disclaimer: This is a demo app based on a predictive model. All predictions should be reviewed by a human expert.")
-
